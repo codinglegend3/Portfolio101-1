@@ -1,0 +1,749 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poetsen+One&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Chicle&family=Poetsen+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Chicle&family=Poetsen+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Chicle&family=Poetsen+One&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+body{
+	margin: 0;
+	padding: 0;
+	background-color: #2b0945;
+	box-sizing: border-box;
+	min-height: 100vh;
+}
+
+.position{
+	position: fixed;
+	width: 100%;
+	height: 20px;
+	background-color: transparent;
+	overflow: visible;
+	z-index: 1700;
+}
+/*header deign start*/
+header{
+	width: 100%;
+	height: 70px;
+	background-color: transparent;
+	display: flex;
+}
+header:before{
+	width: 100%;
+	height: 70px;
+	background-color: transparent;
+	display: flex;
+	opacity: 0;
+	animation: visible;
+	animation-delay: 1s;
+	animation-duration: 10s;
+	animation-iteration-count: 1;
+	animation-timing-function: ease;
+}
+
+@keyframes visible{
+	0%{
+		opacity: 0;
+	}
+	20%{
+		opacity:0.5;
+	}
+	50%{
+		opacity:0.8;
+	}
+
+	100%{
+		opacity: 1;
+	}
+}
+
+header .logo{
+	flex-basis: 200px;
+/*	margin-left: 20px;*/
+	display: flex;
+	justify-content: center;
+	flex-grow: 0;
+}
+
+header .logo h1{
+	font-size: 20px;
+	font-family: "Poetsen One", sans-serif;
+  	font-weight: lighter;
+  	font-style: normal;
+  	text-align: center;
+  	align-self: center;
+  	color: #f8f7f8;
+}
+
+header .logo h1 .logo-design{
+	color: #f6c35e;
+}
+
+header ul{
+	flex-basis: 600px;
+	flex-grow: 3;
+	background-color: transparent;
+	display: flex;
+	justify-content: space-evenly;
+/*	height: 100%;*/
+
+}
+html{
+	scroll-behavior: smooth;
+}
+header ul li{
+	align-self: center;
+	list-style: none;
+}
+
+header ul li a{
+	text-decoration: none;
+	font-family: "Chicle", serif;
+	font-size: 1.13em;
+  	font-weight: 400;
+  	font-style: normal;
+  	color: #f8f7f8;
+  	transition: all 500ms ease;
+}
+
+header ul li a:hover{
+	color: #fec260;
+	cursor: pointer;
+}
+
+header ul li a:active{
+	color: #fec260;
+}
+
+
+header .country{
+	flex-basis: 50px;
+	background-color: transparent;
+	flex-grow: 0;
+	display: flex;
+	justify-content: center;
+}
+
+header .country img{
+	object-fit: cover;
+	width: 50px;
+	height: 50px;
+	align-self: center;
+	margin-right: 20px;
+}
+
+/*menubar design end*/
+
+/*home design start*/
+
+#Home{
+	height: 100vh;
+	flex-basis: 100%;
+	display: flex;
+	justify-content: space-between;
+	overflow: hidden;
+}
+
+
+#Home .left-content{
+	flex-basis: 50%;
+	height: 100vh;
+	background-color: transparent;
+	position: relative;
+	top: 100px;
+}
+#Home .left-content .body{
+	width: 300px;
+	padding-left: 100px;
+	padding-right: 100px;
+	background-color: blue;
+	color: #ddd2e0;
+	position: relative;
+
+}
+#Home .left-content .body h4{
+	font-family: "Poetsen One", sans-serif;
+  	font-weight: lighter;
+  	font-style: normal;
+  	line-height:1em;
+  	position: absolute;
+ 	top: 6em;
+  	
+}
+
+#Home .left-content .body h3{
+	font-family: "Poetsen One", sans-serif;
+  	font-weight: 400;
+  	font-style: normal;
+  	font-size: 25px;
+  	line-height:1em;
+  	position: absolute;
+ 	top: 5em;
+}
+
+#Home .left-content .body h3 .logo-design{
+	color: #f6c35e;
+}
+#Home .left-content .body h2{
+	font-family: "Poetsen One", sans-serif;
+  	font-weight: 400;
+  	font-style: normal;
+  	font-size: 35px;
+  	line-height: 1em;
+  	position: absolute;
+ 	top: 4.5em;
+}
+#Home .left-content .body h2 .text-design-1{
+	color: #f6c35e;
+}
+ #Home .left-content .body h4,h3,h2{
+ 	margin-top: 10px;
+ 	margin-bottom: 10px;
+ 	position: absolute;
+ 	display: block;
+ 	opacity: 0;
+ 	animation: reveal;
+ 	animation-delay: 0.5s;
+ 	animation-duration: 3s;
+ 	animation-iteration-count: infinite;
+ 	animation-timing-function: ease;
+ 	animation-fill-mode: forwards;
+/* 	top: 6em;*/
+ }
+
+ @keyframes reveal{
+ 	from{
+ 		transform: translate(10px);
+ 	}
+ 	to{
+ 		opacity: 1;
+ 		transform: none;
+ 	}
+ }
+
+#Home .left-content .Home-btn{
+	flex-basis: 20%;
+	background-color: transparent;
+	position: relative;
+	top: 250px;
+	padding-left: 100px;
+	padding-top: 10px;
+	padding-bottom: 50px;
+}
+
+#Home .left-content .Home-btn .Download-cv{
+	margin-right: 30px;
+	background-color: #ffc262;
+	font-size: 1em;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	padding-left: 10px;
+	padding-right: 10px;
+	text-decoration: none;
+	color: #2b0945;
+	border-radius: 17px;
+	font-family: "Poppins", sans-serif;
+  	font-weight: 400;
+  	font-style: normal;
+  	transition: all 1s ease;
+}
+#Home .left-content .Home-btn .Download-cv:hover{
+	background-color: #2b0945;
+	color: #ffc262;
+	border-color: #ffc262;
+	border-style: solid;
+	border-width: 2px;
+}
+#Home .left-content .Home-btn .let-talk{
+	background-color: transparent;
+	color: #ffc262;
+	font-size: 1em;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	padding-left: 10px;
+	padding-right: 10px;
+	text-decoration: none;
+	border-color: #ffc262;
+	border-style: solid;
+	border-width: 2px;
+	border-radius: 17px;
+	font-family: "Poppins", sans-serif;
+  	font-weight: 400;
+  	font-style: normal;
+  	transition: all 1s ease;
+}
+#Home .left-content .Home-btn .let-talk:hover{
+	background-color: #ffc262;
+	color: #2b0945;
+}
+#Home .image-right{
+	flex-basis: 45%;
+	background-image: url(kingsley.png);
+	background-repeat: no-repeat;
+	object-fit: fill;
+/*	background-color: blue;*/
+}
+
+#About{
+	width: 100%;
+	height: 100vh;
+	background-color: #563471;
+	display: flex;
+	justify-content: space-between;
+}
+#About .left-text{
+	flex-basis: 70%;
+	height: 100%;
+	background-color: transparent;
+	display: flex;
+	justify-content: center;
+	flex-flow: column;
+}
+
+#About .left-text .h2{
+	color: #fff;
+	margin-bottom: 80px;
+	margin-left: 50px;
+	font-family: "Poppins", sans-serif;
+  	font-weight: 400;
+  	font-style: normal;
+  	font-size: 30px;
+}
+
+#About .left-text .h2 .me{
+	color: #fec260;
+}
+
+#About .left-text .p1{
+	color: #fff;
+	margin-bottom: 25px;
+	margin-left: 50px;
+	font-family: "Poppins", sans-serif;
+  	font-weight: 400;
+  	font-style: normal;
+  	line-height: 25px;
+
+}
+
+#About .left-text .p1 .dtt{
+	color: #fec260;
+}
+
+#About .right-image{
+	flex-basis: 30%;
+	background-color: transparent;
+	position: relative;
+	overflow: hidden;
+
+}
+
+#About .right-image .picture{
+	position: absolute;
+	width: 90%;
+	height: 70%;
+	background-image: url(html.jpeg);
+	background-repeat: no-repeat;
+	background-size: 90% 70%;
+	top: 150px;
+	left: 70px;
+	animation: slideshowone;
+	animation-delay: 3s;
+	animation-duration: 10s;
+	animation-iteration-count: infinite;
+	animation-timing-function: cubic-bezier(0.2, 0.07, 0.31, 0.13);
+	animation-fill-mode: forwards;
+}
+
+@keyframes slideshowone{
+	0%{
+		background-image: url(html.jpeg);
+	}
+	25%{
+		background-image: url(css.jpeg);
+	}
+	50%{
+		background-image: url(javascript.jpeg);
+	}
+	75%{
+		background-image: url(react.png);
+	}
+	100%{
+		background-image: url(computer.png);
+	}
+}
+
+
+#Services{
+	width: 100%;
+	height: 100vh;
+	background-color: #2b0945;
+	overflow: hidden;
+	
+}
+
+#Services .content{
+	width: 100%;
+	height: 90%;
+	display: flex;
+	justify-content: center;
+	overflow: hidden;
+}
+#Services .services{
+	color: #f8f7f8;
+	text-align: center;
+	width: 1250px;
+	height: 10%;
+	margin-top: 20px;
+	font-size: 45px;
+	overflow: hidden;
+	font-family: "Poetsen One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+#Services .services .services-1{
+	color: #ffc262;
+	overflow: hidden;
+}
+#Services .card-1, .card-2, .card-3, .card-4{
+	flex-basis: 300px;
+	height: 350px;
+	background-color: #563471;
+	align-self: center;
+	margin-left: 10px;
+	margin-right: 10px;
+	margin-top: 7em;
+	border-radius: 30px;
+	color: #f8f7f8;
+	display: flex;
+	flex-flow: column;
+	justify-content: center;
+	align-items: center;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    transition: all 500ms ease;
+}
+#Services .card-1:hover{
+	box-shadow: 0 0 20px #ffc262;
+	cursor: pointer;
+}
+#Services .card-2:hover{
+	box-shadow: 0 0 20px #ffc262;
+	cursor: pointer;
+}
+#Services .card-3:hover{
+	box-shadow: 0 0 20px #ffc262;
+	cursor: pointer;
+}
+#Services .card-4:hover{
+	box-shadow: 0 0 20px #ffc262;
+	cursor: pointer;
+}
+
+#Services svg{
+	width: 100px;
+	height: auto;
+}
+
+#Services ul{
+	
+}
+
+#Services ul li::marker {
+  color: #ffc262;
+}
+
+
+/*skills design*/
+
+
+#Skills{
+	width: 100%;
+	height: 100vh;
+	background-color: #563471;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-flow: column;
+}
+
+#Skills .text-1{
+	color: #fff;
+	font-family: "Poppins", sans-serif;
+	font-weight: 400;
+	font-size: 30px;
+	margin-bottom: 20px;
+}
+#Skills .text-1 .text-1-1{
+	color: #ffc262;
+}
+#Skills .skills-progress{
+	width: 700px;
+	height: 400px;
+	background-color: #2b0945;
+	border-radius: 100px;
+	display: flex;
+	flex-flow: column;
+	justify-content: center;
+	align-items: center;
+}
+
+#Skills .skills-progress .progress-1, .progress-2, .progress-3{
+	margin-bottom: 20px;
+	margin-top: 20px;
+}
+#Skills .skills-progress .text{
+	color: #fff;
+	font-family: "Poppins", sans-serif;
+  	font-weight: 400;
+  	font-style: normal;
+}
+
+#Skills .skills-progress .progress-1 .meter{
+	width: 400px;
+	height: 10px;
+	background-color: #fff;
+	border-radius: 20px;
+}
+#Skills .skills-progress .progress-1 .meter .range-1{
+	width: 90%;
+	height: 100%;
+	background-color: #ffc262;
+	border-radius: 20px;
+	animation-name: range;
+	animation-delay: 0.5s;
+	animation-duration: 3s;
+	animation-iteration-count: infinite;
+	animation-fill-mode: forwards;
+	animation-timing-function: ease;
+}
+@keyframes range{
+	0%{
+		width: 70%;
+	}
+	50%{
+		width: 90%;
+	}
+
+	100%{
+		width: 100%;
+	}
+}
+
+
+
+#Skills .skills-progress .progress-2 .meter-2{
+	width: 400px;
+	height: 10px;
+	background-color: #fff;
+	border-radius: 20px;
+}
+
+#Skills .skills-progress .progress-2 .meter-2 .range-2{
+	width: 20%;
+	height: 100%;
+	background-color: #ffc262;
+	border-radius: 20px;
+	animation-name: rangeone;
+	animation-delay: 2s;
+	animation-duration: 3s;
+	animation-iteration-count: infinite;
+	animation-fill-mode: forwards;
+	animation-timing-function: ease;
+}
+@keyframes rangeone{
+	0%{
+		width: 20%;
+	}
+	50%{
+		width: 50%;
+	}
+
+	100%{
+		width: 65%;
+	}
+}
+
+
+#Skills .skills-progress .progress-3 .meter-3{
+	width: 400px;
+	height: 10px;
+	background-color: #fff;
+	border-radius: 20px;
+}
+
+#Skills .skills-progress .progress-3 .meter-3 .range-3{
+	width: 50%;
+	height: 100%;
+	background-color: #ffc262;
+	border-radius: 20px;
+	animation-name: rangetwo;
+	animation-delay: 1s;
+	animation-duration: 3s;
+	animation-iteration-count: infinite;
+	animation-fill-mode: forwards;
+	animation-timing-function: ease-in-out;
+}
+@keyframes rangetwo{
+	0%{
+		width: 50%;
+	}
+	50%{
+		width: 70%;
+	}
+
+	100%{
+		width: 95%;
+	}
+}
+
+#Works{
+	width: 100%;
+	height: 100vh;
+	background-color: transparent;
+	display: flex;
+	flex-flow: column;
+	justify-content: center;
+	align-items: center;
+}
+#Works .works{
+	color: #fff;
+	font-family: "Poetsen One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    margin-top: 50px;
+    font-size: 40px;
+}
+
+#Works .works .works-1{
+	color: #f6c35e;
+}
+
+#Works .iframes iframe{
+	border-radius: 20px;
+	margin-left: 5px;
+	margin-right: 5px;
+}
+#Works .iframes{
+	width: 80%;
+	height: 500px;
+	background-color: transparent;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	overflow-y: hidden;
+	margin-top: 50px;
+}
+
+#Contact{
+	width: 100%;
+	height: 50vh;
+	background-color: #563471;
+	margin-top: 50px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-flow: column;
+	position: relative;
+}
+
+#Contact .contact{
+	color: #fff;
+	font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-size: 30px;
+    position: absolute;
+    top: 50px;
+}
+#Contact .contact .contact-1{
+	color: #f6c35e;
+}
+#Contact .contact-form{
+	display: flex;
+	justify-content: center;
+	width: 100%;
+	height: 200px;
+	margin-top: 100px;
+	background-color: transparent;
+	position: relative;
+}
+
+#Contact .contact-form .email{
+	width: 300px;
+	height: 100px;
+	background-color: transparent;
+	display: flex;
+	align-items: center;
+	flex-flow: column;
+	justify-content: center;
+	position: absolute;
+	left: 0;
+
+}
+
+
+#Contact .contact-form .location{
+	width: 300px;
+	height: 100px;
+	background-color: transparent;
+	display: flex;
+	align-items: center;
+	flex-flow: column;
+	justify-content: center;
+	position: absolute;
+	left: 500px;
+}
+
+#Contact .contact-form .location-text, .email-text, .phone-text{
+	color: #fff;
+	font-size: 20px;
+	font-family: "Poppins", sans-serif;
+    font-weight: 400;
+}
+
+#Contact .contact-form .phone{
+	width: 300px;
+	height: 100px;
+	background-color: transparent;
+	display: flex;
+	align-items: center;
+	flex-flow: column;
+	justify-content: center;
+	position: absolute;
+	right: 0;
+}
+
+@media only screen and (max-width: 1278px){
+
+	#Home .left-content .body h4{
+		top: 14em;
+	}
+
+	#Home .left-content .body h3{
+		top: 7em;
+		font-size: 35px;
+	}
+	#Home .left-content .body h2{
+		top: 7em;
+		font-size: 40px;
+	}
+	#Home .left-content .Home-btn{
+		top: 27em;
+	}
+
+
+/*changed*/
+#Home .image-right{
+	width: 30%;
+	height: 100vh;
+	background-image: url(kingsley.png);
+	background-repeat: no-repeat;
+	object-fit: fill;
+	background-size: 500px 100vh;
+
+/*	background-color: blue;*/
+}
+
+
+}
+
